@@ -1,0 +1,84 @@
+:root {
+  --bg: #ffffff;
+  --text: #1a1a1a;
+  --primary: #4f6ef7;
+  --card: #f4f5f7;
+  --nav-bg: rgba(255, 255, 255, 0.8);
+  --space: 1rem;
+  --font: "Segoe UI", sans-serif;
+}
+[data-theme="dark"] {
+  --bg: #1a1a1a;
+  --text: #f4f5f7;
+  --primary: #7c93ff;
+  --card: #2a2a2a;
+  --nav-bg: rgba(26, 26, 26, 0.8);
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: var(--font); background: var(--bg); color: var(--text); transition: background .3s, color .3s; }
+a { color: inherit; text-decoration: none; }
+h2 { margin-bottom: var(--space); }
+
+/* Nav (Flexbox) */
+nav {
+  position: fixed; top: 0; left: 0; right: 0;
+  display: flex; justify-content: space-between; align-items: center;
+  padding: var(--space); background: var(--nav-bg); backdrop-filter: blur(6px);
+  transition: background .3s, box-shadow .3s; z-index: 100;
+}
+nav.scrolled { box-shadow: 0 2px 8px rgba(0,0,0,.15); }
+.logo { font-weight: bold; font-size: 1.2rem; }
+.nav-menu { display: none; list-style: none; gap: var(--space); align-items: center; }
+.nav-menu.active { display: flex; flex-direction: column; position: absolute; top: 100%; right: 0; background: var(--bg); padding: var(--space); }
+.hamburger { display: block; background: none; border: none; font-size: 1.5rem; color: inherit; cursor: pointer; }
+#themeToggle { background: none; border: none; font-size: 1.2rem; cursor: pointer; }
+
+/* Sections */
+.section { padding: 4rem var(--space); max-width: 1000px; margin: 0 auto; }
+.hero { min-height: 100vh; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; gap: var(--space); }
+.hero-btns { display: flex; gap: var(--space); }
+
+.btn { background: var(--primary); color: #fff; padding: .6rem 1.2rem; border: none; border-radius: 6px; cursor: pointer; transition: transform .2s, opacity .2s; }
+.btn:hover { transform: translateY(-2px); opacity: .9; }
+.btn-outline { background: transparent; border: 1px solid var(--primary); color: var(--primary); }
+
+.about-wrap { display: flex; flex-direction: column; gap: var(--space); align-items: center; }
+.profile { width: 150px; height: 150px; border-radius: 50%; object-fit: cover; background: var(--card); }
+.skills { list-style: none; display: flex; flex-wrap: wrap; gap: var(--space); }
+.skills li { background: var(--card); padding: .5rem 1rem; border-radius: 6px; }
+
+/* Projects (Grid) */
+.projects { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: var(--space); }
+.card { background: var(--card); padding: var(--space); border-radius: 8px; box-shadow: 0 2px 6px rgba(0,0,0,.1); transition: transform .2s; }
+.card:hover { transform: translateY(-4px); }
+.card h3 { margin-bottom: .5rem; }
+
+/* Form */
+form { display: flex; flex-direction: column; gap: .5rem; max-width: 500px; }
+input, textarea { padding: .6rem; border: 1px solid #ccc; border-radius: 6px; background: var(--bg); color: var(--text); }
+textarea { min-height: 100px; }
+.error { color: #e04141; font-size: .85rem; }
+.success { color: #2e9e4f; }
+
+footer { text-align: center; padding: 2rem; display: flex; flex-direction: column; gap: .5rem; }
+
+/* States */
+.loading, .msg { text-align: center; padding: 2rem; }
+.spinner { width: 32px; height: 32px; border: 4px solid var(--card); border-top-color: var(--primary); border-radius: 50%; margin: 0 auto; animation: spin 1s linear infinite; }
+@keyframes spin { to { transform: rotate(360deg); } }
+
+.top-btn { position: fixed; bottom: 2rem; right: 2rem; width: 44px; height: 44px; border: none; border-radius: 50%; background: var(--primary); color: #fff; font-size: 1.2rem; cursor: pointer; display: none; }
+.top-btn.show { display: block; }
+
+/* Scroll animation */
+.reveal { opacity: 0; transform: translateY(30px); transition: opacity .6s, transform .6s; }
+.reveal.visible { opacity: 1; transform: none; }
+
+/* Tablet */
+@media (min-width: 768px) {
+  .nav-menu { display: flex; flex-direction: row; }
+  .hamburger { display: none; }
+  .nav-menu.active { position: static; flex-direction: row; background: none; padding: 0; }
+  .about-wrap { flex-direction: row; align-items: flex-start; }
+}

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="ko" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>이준엽 포트폴리오</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <script src="js/main.js" defer></script>
+</head>
+<body>
+  <header>
+    <nav id="nav">
+      <a href="#hero" class="logo">이준엽</a>
+      <ul class="nav-menu" id="navMenu">
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li><button id="themeToggle" aria-label="테마 전환">🌙</button></li>
+      </ul>
+      <button id="hamburger" class="hamburger" aria-label="메뉴 열기">☰</button>
+    </nav>
+  </header>
+
+  <main>
+    <section id="hero" class="hero">
+      <h1>Hello!</h1>
+      <p>I am 이준엽. hi</p>
+      <div class="hero-btns">
+        <a href="#projects" class="btn">View Projects</a>
+        <a href="#contact" class="btn btn-outline">Contact</a>
+      </div>
+    </section>
+
+    <section id="about" class="section reveal">
+      <h2>About Me</h2>
+      <div class="about-wrap">
+        <img src="images/profile.png" alt="이준엽 프로필 사진" class="profile" />
+        <p>안녕하세요, 이준엽입니다. 웹 개발을 공부하고 있습니다.</p>
+      </div>
+    </section>
+
+    <section id="skills" class="section reveal">
+      <h2>Skills</h2>
+      <ul class="skills">
+        <li>HTML</li>
+        <li>CSS</li>
+        <li>JavaScript</li>
+        <li>Git</li>
+      </ul>
+    </section>
+
+    <section id="projects" class="section reveal">
+      <h2>Projects</h2>
+      <div id="projectList" class="projects"></div>
+    </section>
+
+    <section id="contact" class="section reveal">
+      <h2>Contact</h2>
+      <form id="contactForm" novalidate>
+        <label for="name">이름</label>
+        <input type="text" id="name" />
+        <small class="error" id="nameErr"></small>
+
+        <label for="email">이메일</label>
+        <input type="email" id="email" />
+        <small class="error" id="emailErr"></small>
+
+        <label for="message">메시지</label>
+        <textarea id="message"></textarea>
+        <small class="error" id="messageErr"></small>
+
+        <button type="submit" class="btn">Send</button>
+        <p id="formSuccess" class="success"></p>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 이준엽</p>
+    <a href="https://github.com/jy0830" target="_blank" rel="noopener">GitHub</a>
+  </footer>
+
+  <button id="topBtn" class="top-btn" aria-label="맨 위로">↑</button>
+</body>
+</html>
