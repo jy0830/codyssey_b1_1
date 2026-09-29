@@ -25,3 +25,10 @@ https://jy0830.github.io/codyssey_b1_1/
 
 ## 스크린샷
 (데스크톱 / 모바일 / 다크모드 스크린샷 추가)
+
+![alt text](./images/스크린샷%20데스크탑.png)
+
+![alt text](./images/스크린샷%20좁은화면.png)
+
+![alt text](./images/스크린샷%20밤낮모드.png)
+
