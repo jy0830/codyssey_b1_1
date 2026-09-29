@@ -21,7 +21,7 @@
 - Intersection Observer threshold: 0.2
 
 ## 배포 URL
-(GitHub Pages 배포 후 추가)
+https://jy0830.github.io/codyssey_b1_1/
 
 ## 스크린샷
 (데스크톱 / 모바일 / 다크모드 스크린샷 추가)
