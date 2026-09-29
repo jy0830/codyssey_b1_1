@@ -1,7 +1,7 @@
 {
   "env": {
     "ANTHROPIC_BASE_URL": "https://copa.codyssey.kr",
-    "ANTHROPIC_API_KEY": "sk-cody-live-KNj6iy1F9Ze5gawjoL19ohMCVFy6hJ0YOcPbRgU9LOg",
+    "ANTHROPIC_API_KEY": "****",
     "ANTHROPIC_MODEL": "claude-opus-4-8",
     "ANTHROPIC_SMALL_FAST_MODEL": "claude-haiku-4"
   }
